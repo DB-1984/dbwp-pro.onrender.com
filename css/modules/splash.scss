@@ -1,0 +1,224 @@
+@import "media-queries";
+@import "body";
+
+.splash {
+  margin-top: 0px !important;
+  position: relative;
+  //background-color: #ffffff66;
+  h1,
+  .lead {
+    color: #ededed;
+  }
+}
+
+hr.above-d4 {
+  border: none;
+  background-color: #ededed !important;
+  height: 4px;
+  margin: 10px 10px;
+  opacity: 1;
+}
+
+.front-page {
+  width: 100vw;
+  //background: center / cover no-repeat url("/assets/mountain-bg.jpg");
+  position: relative;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  //padding-top: 200px;
+  margin-bottom: 50px;
+  max-height: 1300px;
+}
+
+#hero-text {
+  z-index: 5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h1 {
+    text-transform: capitalize;
+    //font-size: calc(4rem + 0.9vw) !important;
+    color: hsl(216, 33%, 97%);
+    padding-left: 15px;
+  }
+
+  p {
+    margin-left: 15px;
+    color: #e7e7e7;
+  }
+}
+
+.text-color {
+  color: #0bb3c5;
+}
+
+.front-page-img {
+  z-index: 4;
+  img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 575px) {
+  h1.display-4 {
+    font-size: 12vw !important;
+    line-height: 12vw !important;
+  }
+
+  .front-page-img {
+    padding-top: 30px !important;
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .front-page {
+    padding-top: 20vh !important;
+    padding-bottom: 7vh;
+  }
+}
+
+@media (min-width: 576px) {
+  h1.display-4 {
+    font-size: 10vh !important;
+    line-height: 10vh !important;
+  }
+  .front-page {
+    padding-top: 20vh !important;
+    padding-bottom: 17vh !important;
+  }
+  .front-page-img {
+    padding-top: 30px !important;
+  }
+}
+
+.btn {
+  &.cta {
+    background: transparent;
+    color: #000;
+    border: 4px solid #000;
+    display: block;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    i {
+      font-family: "FontAwesome";
+      font-style: normal;
+      padding-left: 3px;
+    }
+
+    &:hover {
+      background-color: #303030 !important;
+      opacity: 1 !important;
+      border-color: #303030 !important;
+      color: white !important;
+    }
+  }
+}
+
+.pre-form-bg {
+  @include below-desktop {
+    padding-bottom: 40px;
+  }
+}
+
+.img-fluid.splash {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.splash-wrapper {
+  //background: url("/assets/mountain-bg.jpg");
+  background-position: cover;
+  position: relative;
+}
+
+button#usp-anchor {
+  border-color: white;
+  color: white;
+  position: relative;
+  z-index: 4;
+  width: 250px !important;
+  background: transparent;
+}
+
+/*.splash-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #00000063;
+  z-index: 0;
+}
+*/
+
+div#latest-posts {
+  margin-bottom: 50px;
+}
+
+.border-left-h1 {
+  font-size: 10vh !important;
+  line-height: 10vh !important;
+  width: fit-content;
+  margin: 0 auto;
+  border-left: 15px solid black;
+  text-align: left;
+  padding-left: 10px;
+  position: relative;
+  padding: 30px;
+  //background: #00000042;
+  z-index: 2;
+}
+
+.mntn {
+  @include bs-mobile {
+    margin-top: 40vw;
+  }
+  @media (min-width: 576px) {
+    margin-top: 20vh;
+  }
+  .lead {
+    margin-top: 0;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    line-height: initial;
+    color: #e5e5e5;
+    font-weight: 500;
+    //background: #e5e5e5ba !important;
+    padding: 5px;
+  }
+}
+
+p.typed-js {
+  color: #e5e5e5;
+  mix-blend-mode: difference;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  word-break: break-word;
+  font-size: 1.25rem;
+  /*@media (min-width: 476px) {
+    line-height: 8rem;
+    font-size: 7rem;
+    min-height: 400px;
+  }
+  @media (max-width: 475px) {
+    line-height: 21vw !important;
+    font-size: 21vw;
+    min-height: 250px;
+  }*/
+}
+span.typed-cursor {
+  display: none;
+}

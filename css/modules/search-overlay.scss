@@ -1,0 +1,212 @@
+@import "media-queries";
+@import "body";
+
+.mk-fullscreen-search-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fffcfcf0;
+  text-align: center;
+  transition: all ease-in-out 0.25s;
+  z-index: 9999;
+  font-family: "Inter", sans-serif;
+
+  #mk-fullscreen-search-wrapper {
+    display: inline-block;
+
+    @include desktop-up {
+      max-width: 1000px;
+    }
+
+    @include below-desktop {
+      width: 85%;
+    }
+
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+    transform: scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in-out 0.3s;
+
+    #mk-fullscreen-searchform {
+      input[type="submit"] {
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background-color: transparent;
+        border: 0;
+        right: 0;
+        top: 0;
+      }
+
+      .fullscreen-search-icon {
+        font-size: 25px;
+        position: absolute;
+        right: 15px;
+        width: 25px;
+        top: 30px;
+        color: #fff;
+        color: rgba(255, 255, 255, 0.2);
+        transition: all 0.2s ease-out;
+      }
+
+      #mk-fullscreen-search-input {
+        width: 80%;
+        background-color: transparent;
+        box-shadow: 0 3px 0 0 rgba(255, 255, 255, 0.1);
+        border: 0;
+        text-align: center;
+        font-size: 35px;
+        padding: 20px;
+        color: #2c2c2c;
+        transition: all 0.3s ease-out;
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &.mk-fullscreen-search-overlay-show {
+    visibility: visible;
+    opacity: 1;
+
+    #mk-fullscreen-search-wrapper {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  div#mk-fullscreen-search-wrapper {
+    padding-top: 40px !important;
+  }
+
+  .mk-fullscreen-close {
+    position: relative;
+    z-index: 99999999;
+    font-size: 25px;
+    transition: transform ease-out 0.2s;
+    transform: rotate(0deg);
+    color: $accent !important;
+  }
+}
+
+input#search-input {
+  background: none;
+  border: none;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #303030;
+  font-size: 1em;
+  color: #303030;
+  font-weight: 400;
+  padding-right: 30px;
+  width: 225px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 400 !important;
+    color: #333;
+  }
+}
+
+#searchform {
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.mk-animate-element,
+.mk-effect-bg-layer,
+.mk-fullscreen-search-overlay {
+  transform: translateZ(0);
+}
+
+.mk-fullscreen-search-overlay .mk-fullscreen-close:link,
+.mk-fullscreen-search-overlay .mk-fullscreen-close:visited {
+  color: #2c2c2c;
+}
+
+a#mk-fullscreen-close-button {
+  color: $accent;
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.mk-search-trigger {
+  transition: color 0.2s ease-in-out;
+}
+
+.mk-fullscreen-search-overlay
+  #mk-fullscreen-search-wrapper
+  #mk-fullscreen-searchform
+  input[type="submit"] {
+  display: none !important;
+}
+
+div#results-container {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.result {
+  height: 40px;
+  display: inline-block;
+  padding: 35px;
+
+  .rounded-pill {
+    background: transparent !important;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 10px;
+  }
+
+  a {
+    color: black !important; // Set default color
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.2rem;
+    float: left;
+    transition: color 0.5s ease-in;
+
+    &:hover {
+      text-decoration: underline !important; // Change color on hover
+    }
+  }
+}
+
+.no-results p {
+  font-size: 1.2rem;
+  text-align: center !important;
+  color: #212121;
+  margin-top: 50px;
+  font-weight: 500;
+}
+
+span#clear {
+  color: #212121;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: -22px;
+}

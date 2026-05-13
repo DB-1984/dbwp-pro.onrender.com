@@ -1,0 +1,136 @@
+@import "media-queries";
+@import "body";
+
+.blog-title {
+  position: relative;
+  color: white; // Set the text color to white or any other color you prefer
+}
+
+.card-img,
+.card-img-top {
+  border-radius: 0 !important;
+}
+
+.card-body i {
+  color: #fff;
+}
+
+h1.blog-title {
+  font-weight: 800;
+  padding: 20px;
+
+  @include small-mobile-up {
+    font-size: 5rem;
+    line-height: 4.5rem;
+  }
+
+  @include small-mobile-down {
+    font-size: 3.6rem;
+  }
+}
+
+.post-cards {
+  margin-top: 50px;
+}
+
+p.blog-intro {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 18px !important;
+}
+
+.btn.btn-primary.cta.blog-btn {
+  border-color: white !important;
+  color: white !important;
+
+  &:hover {
+    border-color: #333 !important;
+  }
+}
+
+.card-date {
+  font-size: 0.6em;
+  font-weight: 700;
+  color: #fff !important;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 2px 6px;
+  margin: 0 auto 25px;
+  width: fit-content;
+}
+
+.blog {
+  .card-text {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  h2.card-title {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .cta {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.blog-header {
+  margin: 150px 0 100px;
+}
+
+.blog-home {
+  margin-top: 120px;
+  background: #212121d4;
+  padding: 20px;
+}
+
+.blog-home-parent {
+  background: url("/assets/qr.png") repeat center;
+  background-size: contain;
+}
+
+.blog-card {
+  border: none !important;
+  background: #454545 !important;
+  padding: 30px;
+  color: #fff !important;
+  margin: 5px;
+}
+
+a#latest-post-link {
+  color: #fff !important;
+  transition: color 0.3s ease-in;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.blog-img-container {
+  position: relative;
+  padding: 30px;
+}
+
+.blog-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; // Adjust the opacity value as needed
+  z-index: 1;
+}
+
+.blog-img-container .blog-img {
+  position: relative;
+  z-index: 2;
+}
+
+.col-md-4.masonry-item.aos-init {
+  z-index: 2;
+}

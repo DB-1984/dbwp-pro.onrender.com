@@ -1,0 +1,140 @@
+.card-header {
+  background: none !important;
+  border: none !important;
+
+  img {
+    width: 250px;
+  }
+}
+
+.usp {
+  .display-5 {
+    font-size: calc(1rem + 2vw) !important;
+  }
+  .row {
+    @media (max-width: 767px) {
+      gap: 20px;
+    }
+  }
+  h1,
+  .lead {
+    color: #272b2d;
+    font-size: 1.1rem !important;
+  }
+  .drop {
+    font-size: 4rem !important;
+  }
+}
+
+.card-body {
+  text-align: center;
+
+  i {
+    color: #484444;
+  }
+}
+ol.list-group.list-group.usp-list > li {
+  padding: 25px;
+  border: none !important;
+}
+.card {
+  flex-direction: column;
+  align-items: center;
+  background: none !important;
+}
+
+p.card-text.card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffbc34;
+}
+
+.card-text a {
+  color: #484444;
+}
+
+.row.second {
+  flex-direction: row-reverse;
+}
+
+.accordion-button {
+  background: #333638 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  &::after {
+    color: white !important;
+  }
+  i {
+    color: #0db4c4;
+  }
+}
+
+.accordion-button.collapsed {
+  background: #333638;
+}
+
+.accordion-button.collapsed::after,
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.accordion {
+  padding-top: 25px;
+}
+
+.folder-shape {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  background: #ffffffde !important;
+  border-radius: 0 3px 3px 3px;
+  /* box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59); */
+  margin-bottom: -8px;
+  margin-top: 12px;
+  border-top-left-radius: 0px !important;
+
+  .lead {
+    color: #303030 !important;
+    overflow-wrap: break-word;
+  }
+
+  &:before {
+    content: "";
+    width: 50%;
+    height: 1em;
+    border-radius: 0 20px 0 0;
+    background-color: rgb(228 228 228);
+    position: absolute;
+    top: -0.9em;
+    left: 0px;
+  }
+}
+.mb-4.usp-block {
+  border-left: 6px solid #000;
+  margin-bottom: 2.5rem !important;
+}
+.usp-wrap {
+  background: url("/assets/black-smoke.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.steps {
+  background: url("/assets/dbwp-logo.png") no-repeat;
+  background-size: contain;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  height: 500px !important;
+}
+.rounded-pill {
+  border: 2px solid black;
+  color: black !important;
+  margin-bottom: 5px !important;
+}
+.list-group-item + .list-group-item,
+.list-group-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8705882353) !important;
+}

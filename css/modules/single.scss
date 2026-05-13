@@ -1,0 +1,42 @@
+@import "media-queries";
+@import "body";
+
+.single-post {
+  margin-top: 200px !important;
+
+  .featured-image {
+    margin: 0 auto 25px;
+    max-width: 1600px;
+  }
+
+  .post-excerpt {
+    padding: 25px;
+    font-weight: 600;
+  }
+
+  .main-post-content {
+    margin: 25px 0 75px;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 2.5rem;
+    color: #f8f8f8 !important;
+  }
+
+  .post-date {
+    color: #bcbcbc;
+    text-align: center;
+    padding-bottom: 20px;
+    a {
+      font-weight: 700;
+      color: white !important;
+    }
+  }
+
+  h1.single-title {
+    font-size: 10vw;
+    line-height: 10vw !important;
+    text-align: center;
+  }
+}
